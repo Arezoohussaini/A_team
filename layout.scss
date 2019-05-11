@@ -1,0 +1,83 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row :50px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 100px 100px 1fr auto;
+  text-align: center;
+}
+
+  .header:hover {
+    transform: scale(1.1);
+    animation-fill-mode: forwards;
+    background-color:yellow;
+  }
+
+.hero {
+  display: grid;
+  grid-template-columns: 8% 2fr 3fr;
+}
+.hero:hover {
+  transform: scale(1.1);
+  animation-fill-mode: forwards;
+  background-color:yellow;
+  
+}
+.hero h1,
+p {
+  grid-column-start: 2;
+ 
+}
+.footer {
+  display: grid;
+  grid-template-columns: 3% 500px 300px auto;
+  grid-auto-rows: minmax(3%, auto);
+  align-self: start;
+
+}
+.footer a{
+  margin: 50 auto;
+  position: relative;
+   border-radius: 20px;
+  width: 50%;
+  height: 150px;
+  background: repeating-linear-gradient(
+    45deg,
+    yellow 0px,
+    red 40px,
+    black 40px,
+    black 80px);
+    left:0%;
+    top:70%;
+    animation-name:footer;
+    animation-duration:3s;
+}
+.menu {
+}
+
+.marker {
+  grid-column-start: 2;
+  position: relative;
+ margin-top:90%;
+ right:30px;
+ bottom:15px;
+ animation-name: marker;
+ animation-duration: 3s;
+ animation-iteration-count: infinite;
+}
+ @keyframes marker{
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 49px;
+    width: 30px;
+    height: 40px;
+  }
+  100% {
+    left: 0px;
+  }
+}
